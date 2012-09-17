@@ -1,0 +1,60 @@
+<%= form_for @task, :html => { :class => 'form-horizontal' } do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation" class="hero-unit">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <fieldset>
+    
+<p class="notice alert"><%= notice %></p>
+    <div class="control-group">
+      <%= f.label :title, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :title, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :body_task, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :body_task, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :image, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.file_field :image, :class => 'file_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :answer, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :answer, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :tag_list, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :tag_list, :class => 'text_field',
+                         :id => "task_tags",
+                         "data-pre" => @task.tags.collect{|t| {:id => t.name, 
+                          :name => t.name }}.to_json
+         %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', tasks_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

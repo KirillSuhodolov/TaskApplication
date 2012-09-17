@@ -1,0 +1,32 @@
+[Sun Sep  9 23:30:51.518 2012] [12122] accepting connections
+[Mon Sep 10 07:17:19.358 2012] [12122] caught SIGTERM, shutting down
+[Mon Sep 10 07:17:19.360 2012] [12122] shutdown complete
+[Mon Sep 10 09:04:55.064 2012] [ 2880] accepting connections
+[Mon Sep 10 10:11:38.745 2012] [ 3115] accepting connections
+[Mon Sep 10 10:31:12.598 2012] [ 3115] caught SIGHUP (seamless=1, in queue=1)
+[Mon Sep 10 10:31:12.601 2012] [ 3115] WARNING: rotating index 'task_core': rename '/home/kirill/itransition/kyrsa4/db/sphinx/development/task_core.mvp' to '/home/kirill/itransition/kyrsa4/db/sphinx/development/task_core.old.mvp' failed: No such file or directory
+[Mon Sep 10 10:31:12.601 2012] [ 3115] rotating index 'task_core': success
+[Mon Sep 10 10:31:12.601 2012] [ 3115] rotating finished
+[Mon Sep 10 11:08:22.156 2012] [ 3115] caught SIGHUP (seamless=1, in queue=1)
+[Mon Sep 10 11:08:22.159 2012] [ 3115] WARNING: rotating index 'task_core': rename '/home/kirill/itransition/kyrsa4/db/sphinx/development/task_core.mvp' to '/home/kirill/itransition/kyrsa4/db/sphinx/development/task_core.old.mvp' failed: No such file or directory
+[Mon Sep 10 11:08:22.159 2012] [ 3115] rotating index 'task_core': success
+[Mon Sep 10 11:08:22.159 2012] [ 3115] rotating finished
+[Mon Sep 10 12:34:00.946 2012] [ 3115] caught SIGTERM, shutting down
+[Mon Sep 10 12:34:00.946 2012] [ 3115] shutdown complete
+[Fri Sep 14 21:03:16.173 2012] [ 2986] accepting connections
+[Fri Sep 14 22:45:43.095 2012] [ 2986] caught SIGHUP (seamless=1, in queue=1)
+[Fri Sep 14 22:45:43.097 2012] [ 2986] WARNING: rotating index 'task_core': rename '/home/kirill/itransition/kyrsa4/db/sphinx/development/task_core.mvp' to '/home/kirill/itransition/kyrsa4/db/sphinx/development/task_core.old.mvp' failed: No such file or directory
+[Fri Sep 14 22:45:43.098 2012] [ 2986] rotating index 'task_core': success
+[Fri Sep 14 22:45:43.098 2012] [ 2986] rotating finished
+[Fri Sep 14 22:45:58.182 2012] [ 2986] caught SIGTERM, shutting down
+[Fri Sep 14 22:45:58.196 2012] [ 2986] shutdown complete
+[Fri Sep 14 22:46:08.074 2012] [ 7919] accepting connections
+[Fri Sep 14 23:47:49.758 2012] [ 7919] caught SIGHUP (seamless=1, in queue=1)
+[Fri Sep 14 23:47:49.761 2012] [ 7919] WARNING: rotating index 'task_core': rename '/home/kirill/itransition/kyrsa4/db/sphinx/development/task_core.mvp' to '/home/kirill/itransition/kyrsa4/db/sphinx/development/task_core.old.mvp' failed: No such file or directory
+[Fri Sep 14 23:47:49.761 2012] [ 7919] rotating index 'task_core': success
+[Fri Sep 14 23:47:49.762 2012] [ 7919] rotating finished
+[Sat Sep 15 00:43:24.110 2012] [ 7919] caught SIGTERM, shutting down
+[Sat Sep 15 00:43:24.111 2012] [ 7919] shutdown complete
+[Sun Sep 16 14:59:32.573 2012] [ 3328] accepting connections
+[Sun Sep 16 15:38:48.742 2012] [ 3328] caught SIGTERM, shutting down
+[Sun Sep 16 15:38:48.742 2012] [ 3328] shutdown complete

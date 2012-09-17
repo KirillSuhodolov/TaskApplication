@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Task application</title>
+ 
+    <!-- [if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="container">
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Task Portal</a>
+    <ul class="nav">
+      
+      <% if user_signed_in? %>
+        <li><a href="/">Main</a></li>
+        <li class="active"><a href="/tasks">Tasks</a></li>
+        <li><a href="/admin/">Admin</a></li>
+        <li class="nav_info">You are sign in <strong><%= current_user.email %></strong>. Not you? </li>
+        <li><%= link_to 'Sign out', destroy_user_session_path, 
+        :method => :delete, :class => "btn btn-danger" %></li>
+
+      <% else %>
+
+       <li class="active"><a href="/users/sign_in">Login</a></li>
+       <li><a href="/users/register">Register</a></li>
+
+      <% end %>  
+    </ul>
+   
+    <div class="theme_changer">
+      <a class="dark btn btn-inverse btn-mini disabled">Dark</a> 
+      <a class="light btn btn-info btn-mini">Light</a>
+    </div>
+  </div>
+</div>
+<!-- Search form for main page -->
+<% if current_page?('/') || current_page?('/tasks') %>
+<div class="row hero-unit">
+   <div class="span3">&nbsp;</div>
+   <div class="span5">
+     <%= form_for tasks_path,:method => :get, 
+     :html => { :class => 'navbar-search pull-left' } do |f| %>
+       <%= text_field :search, params[:search], :class => "search-query" %>
+       <%= submit_tag "Search", :name => nil, :class => "btn" %>
+     <% end %>
+   </div>
+</div>
+<div class="clr"></div>
+<hr />
+<% end %>
+ 
+<div class="row">
+  <div class="span1">&nbsp;</div>
+    <%= yield %>
+  </div>
+  <hr />
+  <footer>
+    <div>&copy; 2012 Tasks App</a></div>
+  </footer>
+</div>
+</body>
+</html>

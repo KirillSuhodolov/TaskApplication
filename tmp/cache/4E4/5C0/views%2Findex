@@ -1,0 +1,55 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347257111.2561374:@value"hI"\<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Shit application</title>
+ 
+    <!-- [if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/bootstrap_and_overrides.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/tasks.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/token-input.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/token-input-facebook.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+    <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-transition.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-alert.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-modal.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-tab.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-popover.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-button.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-affix.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin/lib/namespace.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin/components/jquery.aa.popover.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin/pages/application.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin/pages/batch_actions.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin/application.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin/base.js?body=1" type="text/javascript"></script>
+<script src="/assets/active_admin.js?body=1" type="text/javascript"></script>
+<script src="/assets/bootstrap.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.tokeninput.js?body=1" type="text/javascript"></script>
+<script src="/assets/tasks.js?body=1" type="text/javascript"></script>
+<script src="/assets/users/omniauth_callbacks.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="GrNMyyqnntWIsmAVL/wu8ALO56qyEoPLkWRPLGdHOpU=" name="csrf-token" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+:ET

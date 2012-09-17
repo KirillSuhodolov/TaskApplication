@@ -1,0 +1,195 @@
+@import "twitter/bootstrap/bootstrap";
+body { 
+    padding-top: 20px;
+}
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not 
+//       have the proper paths. So for now we use the absolute path.
+@fontAwesomeEotPath: '/assets/fontawesome-webfont.eot';
+@fontAwesomeWoffPath: '/assets/fontawesome-webfont.woff';
+@fontAwesomeTtfPath: '/assets/fontawesome-webfont.ttf';
+@fontAwesomeSvgPath: '/assets/fontawesome-webfont.svg';
+
+// Font Awesome
+@import "fontawesome";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/less.html for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+.container {
+    width:1000px;
+    .navbar-inner {
+        background-color:#333;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#777), to(#111)); }
+    .row {
+        margin:0;
+        border-radius:10px;
+        /*background: url(/images/blood.jpg) top left repeat #d7d7d7;*/
+        background-color: #666;
+        color:#eee;
+         }
+    .counter {float:left; width:55px; color:#eee; font-size:12px;padding:5px 0;background-color:#555;margin-top:3px;text-align:center;border-radius:3px;}
+    .tag_cloud {
+        background-color: #111;
+        border-radius: 10px;
+        padding: 5px 5px 15px 5px;
+        text-align: center;
+        margin:30px 10px 0 0;
+    }
+    .icon-envelope, .icon-asterisk {color:#111;}
+
+    .pagination a, .pagination span {background-color: #111;}
+    .table {background-color: #111; color:#eee;border: 1px solid #eee;}
+    .table td, .table th {border-right: 1px solid #eee;}
+    .span6 {padding:30px;background-color: #222;margin:10px auto;float:none;
+            border-radius: 20px 0 20px 0;}
+    .theme_changer {float:right;padding:3px;}
+
+    .navbar .brand {
+        color:#999;
+        width:150px; 
+        text-align:center;
+        border-right:1px solid #fff;}
+    .navbar .nav {width:630px; 
+        li a {color:#ddd; text-shadow:0px 1px #DDD;
+            
+             &:hover {color:#a1a1a1;}
+             }
+         .btn.btn-danger {padding:5px 10px;margin: 3px;
+            &:hover {background:#D74645;}
+         }
+         .active a{color:#eee;background-color: #657575;}
+    }
+
+    .nav_info {color:#fff;padding:10px;margin-left:50px;}
+    h1 { font-size:26px; margin-right:20px;text-align: center;color:#eee;}
+    h2 {font-size:20px;}
+    .btn.someshit {float:left; margin:20px 10px 0 0; padding-left: 10px;}
+    .pagination {
+        float:left;
+
+        a.previous_page {border: 1px solid #DDD;}
+        span.disabled {
+            float: left;
+            padding: 2px 14px;
+            line-height: 34px;
+            text-decoration: none;
+            border: 1px solid #DDD;
+            
+        }
+        span.next_page.disabled {border-left-width: 0;}
+
+       .current{
+            float: left;
+            padding: 2px 14px;
+            line-height: 34px;
+            text-decoration: none;
+            border: 1px solid #DDD;
+            border-left-width: 0;
+            color:#999;
+            background-color: #222;
+            font-style:normal;
+            
+        }
+    }
+    footer {font-size:0.85em;padding:0 0 20px 0;}
+}
+#error_explanation.hero-unit {color:#DA4F49;padding:30px;}
+.row.hero-unit {
+    width: 940px;
+    text-align: right;
+    float: right;
+    padding: 30px;
+    margin-bottom:0;
+}
+.new_links {width:360px;
+    .btn {
+    float:left;margin:5px 10px 5px 0;padding-left:10px;
+    }
+}
+.controls input.checkbox {float: left; margin: 1px 10px 1px 0;}
+.clr {clear:both;}
+.css1 { font-size: 0.8em; }
+.css2 { font-size: 1.0em; }
+.css3 { font-size: 1.5em; }
+.css4 { font-size: 1.8em; } 
+
+/* Light theme styles */
+.container.light {
+    width:1000px;
+    .navbar-inner {
+        background-color:#bae3e3;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bae3e3), to(#91c1c0));}
+    .pagination a, .pagination span {background-color: #e1e1e1;}
+    .span6 {padding:30px;background-color: #e1e1e1;margin:10px auto;}
+    .row {background-color: #f2f7f7;background-image:none;color:#333; }
+    .tag_cloud {background-color: #e1e1e1;}
+    .table {background-color: transparent;color:#333;}
+    .navbar .brand {color:#420f53;text-shadow:1px 2px #fff, 1px 1px #fff;}
+     .counter {float:left; width:55px; color:#555; font-size:12px;padding:5px 0;background-color:#e1e1e1;margin-top:3px;text-align:center;border-radius:3px;}
+    .navbar .nav {
+        li a {color:#fff; text-shadow:0px 1px #DDD;
+            
+             &:hover {color:#444;}
+             }
+         .btn.btn-danger {padding:5px 10px;margin: 3px;
+            &:hover {background:#D74645;}
+         }
+         .active a{color:#444;background-color: #eee;}
+    }
+
+    .nav_info {color:#fff;}
+    h1 { color:#333;}
+    h2 {font-size:20px;}
+    .btn.someshit {float:left; margin:20px 10px 0 0; padding-left: 10px;}
+    .pagination {
+
+        a.previous_page {border: 1px solid #DDD;}
+        span.disabled {
+            float: left;
+            padding: 2px 14px;
+            line-height: 34px;
+            text-decoration: none;
+            border: 1px solid #DDD;
+             
+        }
+        span.next_page.disabled {border-left-width: 0;}
+
+        .current{
+            float: left;
+            padding: 2px 14px;
+            line-height: 34px;
+            text-decoration: none;
+            border: 1px solid #DDD;
+            border-left-width: 0;
+            color:#999;
+            background-color: #e1e1e1;
+            
+        }
+    }
+    footer {font-size:0.85em;padding:0 0 20px 0;}
+}
+
+.controls ul.token-input-list-facebook {
+    width: 222px;
+    clear: none;
+    float: left;
+    border-radius: 3px;
+}
+.controls li.token-input-input-token-facebook {width:222px;}
+.answer input.btn:last-child {margin-top: -10px;}
+.answer #answer {text-align:left;cursor:default;}

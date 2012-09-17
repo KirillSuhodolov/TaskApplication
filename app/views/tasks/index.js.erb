@@ -1,0 +1,7 @@
+$("#task_paginator").html("<%= escape_javascript(render :partial =>'tasks/tasklist', :locals => {:tasks => @tasks}) %>");
+
+jQuery.ajaxSetup({
+    'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+});
+
+

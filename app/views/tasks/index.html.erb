@@ -1,0 +1,15 @@
+<div class="span7 ">
+    <h1>All tasks list</h1> 
+    <div id='task_paginator'> 
+      <%= render 'tasklist' %>
+    </div> 
+</div>  
+<div class="span2" style="float:right;">
+    <%= link_to ' Add task', new_task_path, :class => "btn someshit btn-primary icon-plus-sign" %><br clear="both" />
+    <%= render "tag_cloud" %>
+</div>
+<br clear="both" />
+
+
+
+

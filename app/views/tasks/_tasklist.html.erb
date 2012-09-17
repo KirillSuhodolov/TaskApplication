@@ -1,0 +1,36 @@
+<%= will_paginate @tasks %>
+<br clear="all">
+<table class="table">
+  <tr>
+    <th>Task Title</th>
+    <th>Task Description</th>
+    <th>Tags</th>
+    <th>Show</th>
+  </tr>
+
+<% @tasks.reverse.each do |task| %>
+  <tr>
+    <td width="10%"><%= link_to task.title, task_path(task) %></td>
+    <td width="50%">
+    <%= markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+                    :autolink => true, 
+                    :fenced_code_blocks => true,
+                    :no_intra_emphasis => true,
+                    :hard_wrap => true) 
+     
+    raw truncate syntax_highlighter(markdown.render(task.body_task)) , length: 300 %>
+    </td>
+    <td width="10%"><%= task.tag_list %></td>
+    <td width="10%"><%= link_to 'read more', task, :class => 'btn btn-mini' %> </td> 
+  </tr>
+<% end %>
+</table>
+<!-- Align Paginator to center -->
+<%= will_paginate @tasks %>
+<script type="text/javascript">
+    $('.pagination').each( function() {
+        var pwidth = $(this).width();
+        var align = (670 - pwidth)/2;
+        $(this).css('margin-left', align);
+    });
+</script>

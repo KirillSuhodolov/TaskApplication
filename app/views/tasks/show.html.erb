@@ -1,0 +1,56 @@
+<div class="span6">
+  <p class="notice alert"><%= notice %></p>
+<h1>Show task full text</h1>
+  
+  <div id="primary">
+      <div class="show">
+        <p>
+          <h4><%= @task.title %></h4>
+        </p>
+        <hr>
+        <p>
+        
+        <%= markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+                      :autolink => true, 
+                      
+                      :fenced_code_blocks => true,
+                      :no_intra_emphasis => true,
+                      :hard_wrap => true) 
+            raw syntax_highlighter(markdown.render(@task.body_task)) 
+
+            %>
+      </p>
+      <hr>
+      <% if !(/missing+/ =~ @task.image.url)  %>
+      <p><%= image_tag @task.image.url(:medium), :class => "img-polaroid" %></p>
+      <hr>
+      <% end %>
+      <p> <strong>Answer: </strong>
+        <%= @task.answer %>
+      </p>
+      <p>Your count is: <%= current_user.counter %></p>
+      <% if @task.tag_list.length > 1 %>
+        <p> <strong>Tags: </strong><%= @task.tag_list %></p>
+      <% end %>
+     </div>
+  </div>
+
+  <div class="answer"> 
+  <% if @statistic.present? && @statistic.user_id == current_user.id && @statistic.task_id == task.id %> 
+    <%= label :answer, :class => 'control-label' %>
+    <% else %>
+      <%= form_tag(:action => "answer_add", :method => "post") do %>
+      <%= text_field_tag(:answer) %>
+      <%= hidden_field_tag :task_id, :value => @task.id, :class => "btn" %>
+      <%= submit_tag("Answer") %>
+    <% end %>
+  </div>
+  <% end %>
+
+</div>
+  <% if @task.user_id == current_user.id %>
+    <%= link_to ' Edit', edit_task_path(@task),:class => 'btn btn-primary icon-pencil'  %>
+    <%= link_to ' Delete', @task, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger icon-remove' %><p></p>
+  <% end %>
+  <%= link_to ' Back', tasks_path, :class => 'btn  icon-share-alt'  %>
+</div>

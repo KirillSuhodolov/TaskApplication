@@ -1,0 +1,72 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347796786.7254798:@value"m[I"_// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
+//
+
+
+
+
+// require ckeditor/init
+
+$(function() {
+  $(".pagination a").live("click", function() {
+    $(".pagination").html("<a class='previous_page'>...Page is loading...</a>");
+    $.getScript(this.href);
+    return false;
+  });
+  // Hide alerts without text
+  if ($('p.alert').text().length > 0) {
+    $('p.alert').effect("shake", { distance:5, direction: "down up", times:2 }, 200);
+    $('p.alert-success').css('visibility','hidden');
+  }
+  else {
+    $('p.alert').hide();
+  }
+  if ($('p.notice.alert').text().length > 0) {
+    $('p.alert').effect("shake", { distance:5, direction: "down up", times:2 }, 200)
+                .fadeTo(4000, 0.0);
+
+  }
+  else {
+    $('p.notice.alert').hide();
+  }
+  // Tag autocomplete
+    $("#task_tags").tokenInput("/tasks/tags.json", {
+      crossDomain: false,
+      prePopulate: $("#task_tags").data("pre"),
+      theme: "facebook",
+      allowCustomEntry: true
+    }).addClass('text_field');
+    
+    // Adding 2 stylesheet themes
+    $('.light').on("click", function() {
+      $('body').find('.dark').removeClass('disabled');
+      $('body').find('.container').addClass('light');
+      $(this).addClass('disabled');
+      $('.brand').text('Ligh Theme');
+    });
+
+    $('.dark').on("click", function() {
+      $('body').find('.light').removeClass('disabled');
+      $('body').find('.container').removeClass('light');
+      $(this).addClass('disabled');
+      $('.brand').text('Dark Theme');
+
+    });
+  
+  // 
+  $('.answer').find('input').addClass('btn');
+ 
+ 
+
+});
+if (window.location.hash == '#_=_')window.location.hash = '';
+:EF
